@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FILE    : main.tex
 % AUTHOR  : (C) Copyright 2018 by Sean Klink & Carl Brandon & Peter Chapin
-% SUBJECT : Paper on CubedOS
+% SUBJECT : Paper on Merc
 %
 % TODO: Write me! Add more specific items here as they become apparent.
 %
@@ -10,7 +10,7 @@
 %    Carl Brandon
 %    Vermont Technical College
 %    Randolph Center, VT 05061
-%    CBrandon@vtc.vsc.edu
+%    cbrandon@vtc.edu
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %+++++++++++++++++++++++++++++++++
@@ -32,7 +32,7 @@
 %++++++++++++++++++++
 \begin{document}
 
-\title{Message Encoding for CubedOS Using the XDR2OS3 Code Generator}
+\title{Message Encoding for CubedOS Using the Merc Code Generator}
 \author{Sean Klink\inst{1} \and Peter Chapin\inst{3} \and Carl Brandon\inst{2} }
 
 \institute{Vermont Technical College, Randolph Center VT 05061, USA,\\
@@ -60,12 +60,12 @@
   and return reply messages to clients. Message data is encoded using the external data
   representation (XDR) standard. Each module thus provides encoding and decoding subprograms so
   the clients of a module are not required to manage message encodings themselves. These
-  subprograms are tedious for module authors to produce manually. In this paper we present
-  XDR2OS3, a tool that enables CubedOS module authors to specify message structures using an
-  interface language that follows the XDR standard, extended to account for the special
-  properties of \SPARK\ (such as constrained subtypes and message invariants). XDR2OS3 generates
-  a \SPARK\ package containing suitable encoding and decoding subprograms for each module. The
-  output of XDR2OS3 can be analyzed by the \SPARK\ tools and proved free of runtime error.
+  subprograms are tedious for module authors to produce manually. In this paper we present Merc,
+  a tool that enables CubedOS module authors to specify message structures using an interface
+  language that follows the XDR standard, extended to account for the special properties of
+  \SPARK\ (such as constrained subtypes and message invariants). Merc generates a \SPARK\
+  package containing suitable encoding and decoding subprograms for each module. The output of
+  Merc can be analyzed by the \SPARK\ tools and proved free of runtime error.
 
   \keywords{SPARK, student project, CubeSat}
 \end{abstract}
@@ -77,6 +77,6 @@
 \input{conclusion}
 
 \bibliographystyle{splncs03}
-\bibliography{../../LaTeX/references-General,../../LaTeX/references-SPARK,../../LaTeX/references-CubeSat}
+\bibliography{../references-General,../references-SPARK,../references-CubeSat}
 
 \end{document}

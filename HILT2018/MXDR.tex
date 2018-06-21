@@ -39,7 +39,7 @@ constraints to facilitate the analyses and proofs done by the compiler and tools
 
 MXDR supports XDR's structure types, which are mapped into Ada records in an obvious way. Such
 types can be used just as the primitive types can be used when defining messages. The messages
-themselves, however, are defined using a special ``message struct'' that signals to the XDR2OS3
+themselves, however, are defined using a special ``message struct'' that signals to the Merc
 tool that appropriate encoding/decoding subprograms need to be generated.
 
 The contents of a message struct are the parameters of the message. They are mapped to the
@@ -100,7 +100,7 @@ that the condition expressed by the invariant is try when a message is encoded, 
 invariant to the receiving code after the message is decoded. SPARK shows that the generated
 code can only produce messages that meet the invariant.
 
-% XDR2OS3 does not necessarily initialize the decided values in accordance with the invariant so
+% Merc does not necessarily initialize the decided values in accordance with the invariant so
 % if a decoding fails, SPARK may not be able to prove the generated code. Solving this problem
 % will be difficult.
 
